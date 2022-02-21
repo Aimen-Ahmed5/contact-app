@@ -2,11 +2,16 @@ import React from 'react';
 
 class AddContact extends React.Component {
 
-    state = {
+    constructor(props){
+        super(props);
+
+    this.state = {
         name: "",
         email: ""
     };
+    this.add = this.add.bind(this);
 
+    }
     add = (e) => {
         e.preventDefault();
         if(this.state.name === "" || this.state.email === ""){
